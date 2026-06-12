@@ -1,0 +1,35 @@
+name: scan_receipt
+description: "MoneyChat receipt capture, OCR, parsing, storage, and transaction linking plugin."
+version: 1.0.0
+homepage: https://github.com/tekwiz/moneychat
+
+environment:
+  sdk: ^3.12.1
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+  image_picker: ^1.1.2
+  google_mlkit_text_recognition: ^0.15.0
+  google_mlkit_document_scanner: ^0.2.0
+  crypto: ^3.0.3
+  shared_preferences: ^2.3.2
+  uuid: ^4.5.1
+  path_provider: ^2.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  mockito: ^5.4.4
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: co.tekwiz.moneychat.scan_receipt
+        pluginClass: ScanReceiptPlugin
+      ios:
+        pluginClass: ScanReceiptPlugin
